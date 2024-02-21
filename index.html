@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt Praktyki</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Galeria</h1>
+    </header>
+
+    <main>
+      <section id="photo-preview">
+        <img src="Images/1.jpg" alt="Zdjęcie użytkownika..." id="main-image" />
+      </section>
+
+      <section id="gallery-preview">
+        <h2>Przeglądaj zdjęcia</h2>
+        <div class="gallery">
+          <img src="Images/1.jpg" alt="Zdjęcie użytkownika..." onclick="changeImage('Images/1.jpg')" />
+          <img src="Images/2.jpg" alt="Zdjęcie użytkownika..." onclick="changeImage('Images/2.jpg')" />
+          <img src="Images/3.jpg" alt="Zdjęcie użytkownika..." onclick="changeImage('Images/3.jpg')" />
+          <img src="Images/4.jpg" alt="Zdjęcie użytkownika..." onclick="changeImage('Images/4.jpg')" />
+          <img src="Images/5.jpg" alt="Zdjęcie użytkownika..." onclick="changeImage('Images/5.jpg')" />
+        </div>
+      </section>
+
+      <section id="personalization">
+        <button onclick="personlize()">Personalizuj</button>
+      </section>
+
+      <section id="calculate-photos">
+        <h2>Koszty wywołania zdjęcia</h2>
+        <table>
+          <tr>
+            <th>Format</th>
+            <th>Koszt</th>
+            <th>+123 sztuk</th>
+          </tr>
+          <tr>
+            <td>1 - S</td>
+            <td>0,29 zł/szt.</td>
+            <td>0,25 zł/szt.</td>
+          </tr>
+          <tr>
+            <td>2 - M</td>
+            <td>0,49 zł/szt.</td>
+            <td>0,45 zł/szt.</td>
+          </tr>
+          <tr>
+            <td>3 - L</td>
+            <td>0,74 zł/szt.</td>
+            <td>0,69 zł/szt.</td>
+          </tr>
+        </table>
+        <form>
+          <label for="Ile">Ile zdjęć chciałbyś wywołać:</label>
+          <input type="text" name="Ile" id="Ile" />
+          <br />
+          <label for="Format">Wybierz format:</label>
+          <input type="text" name="Format" id="Format" />
+          <br />
+          <button type="button" onclick="calulateCost()">Licz..</button>
+          <p class="output"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Kontakt: 123 456 789</p>
+    </footer>
+  </body>
+</html>
